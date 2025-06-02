@@ -120,7 +120,7 @@ For the 3rd question we created an app that fetches weather from a Fake API
 
  
 
-# 📚 Book Review MVP App – Java (MVVM Architecture)
+#  Book Review MVP App – Java (MVVM Architecture)
 
 This project is a **Minimum Viable Product (MVP)** version of a **Book Review Android App**, implemented entirely in **Java** using the **MVVM architectural pattern**. It enables users to **browse books, view details**, and **save favorites for offline access**.
 
