@@ -1,36 +1,36 @@
 There were 4 questions in total in which we can choose three 
 I did the Android-assignment1 questions 1,2,3
 
----
+ 
 
-# 🧠 Custom Data Structures in C++
+#  Custom Data Structures in C++
 
 This repository contains implementations of two commonly used data structures from scratch in C++, without relying on STL container classes like `unordered_map` or `map` for internal logic.
 
----
+ 
 
-## 📌 Contents
+##  Contents
 
 1. [`LRUCache`](#1-lrucache)
 2. [`MyHashMap`](#2-myhashmap)
 
----
+ 
 
 ## 1. `LRUCache`
 
-### ✅ Description
+###  Description
 
 Implements an **LRU (Least Recently Used) Cache** that supports the following operations in **O(1)** time:
 
 * `get(key)` – Returns the value for the given key if present, otherwise returns `-1`.
 * `put(key, value)` – Inserts or updates the key-value pair. If the cache exceeds its capacity, the **least recently used** item is evicted.
 
-### 🔧 Internal Design
+###  Internal Design
 
 * Uses a **doubly linked list** to maintain order of use (most recently used at the front).
 * Uses a **hash map** for O(1) access to list nodes by key.
 
-### 🧪 Example
+###  Example
 
 ```cpp
 LRUCache lru(2);
@@ -45,15 +45,15 @@ lru.get(3);    // returns 3
 lru.get(4);    // returns 4
 ```
 
-### 📁 File Structure
+###  File Structure
 
 * `LRUCache.h / LRUCache.cpp` – Contains class definition and implementation.
 
----
+ 
 
 ## 2. `MyHashMap`
 
-### ✅ Description
+###  Description
 
 Implements a simplified version of a **HashMap** (similar to `unordered_map`) supporting:
 
@@ -61,17 +61,17 @@ Implements a simplified version of a **HashMap** (similar to `unordered_map`) su
 * `get(key)` – Returns the value for the given key, or `-1` if not present.
 * `remove(key)` – Removes the key-value pair if it exists.
 
-### 🔧 Internal Design
+###  Internal Design
 
 * Uses an array of buckets (`vector<list<pair<int, int>>>`) for **separate chaining** to resolve collisions.
 * A simple **modulus-based hash function** is used for bucketing.
 
-### 📌 Constraints
+### Constraints
 
 * Key and value are integers in the range `[0, 10^6]`.
 * Max operations: `10^5`
 
-### 🧪 Example
+###  Example
 
 ```cpp
 MyHashMap obj;
@@ -85,13 +85,13 @@ obj.remove(2);
 obj.get(2);     // returns -1
 ```
 
-### 📁 File Structure
+###  File Structure
 
 * `MyHashMap.h / MyHashMap.cpp` – Contains class definition and implementation.
 
----
+ 
 
-## 🔨 Build & Run
+##  Build & Run
 
 Compile with any standard C++ compiler (C++11 or above):
 
@@ -105,10 +105,10 @@ g++ -std=c++11 q2.cpp -o hashmap
 
 > You can also use online compilers like [godbolt.org](https://godbolt.org) or run tests via a main function provided in each file.
 
----
+ 
 
 
----
+ 
 
 Let me know if you also need:
 
@@ -118,15 +118,15 @@ Let me know if you also need:
 
 For the 3rd question we created an app that fetches weather from a Fake API 
 
----
+ 
 
 # 📚 Book Review MVP App – Java (MVVM Architecture)
 
 This project is a **Minimum Viable Product (MVP)** version of a **Book Review Android App**, implemented entirely in **Java** using the **MVVM architectural pattern**. It enables users to **browse books, view details**, and **save favorites for offline access**.
 
----
+ 
 
-## 🔧 Project Overview
+##  Project Overview
 
 * **Architecture**: MVVM (Model-View-ViewModel)
 * **Networking**: Retrofit
@@ -135,9 +135,9 @@ This project is a **Minimum Viable Product (MVP)** version of a **Book Review An
 * **Offline Support**: Available via local database
 * **UI Updates**: LiveData used for reactive programming
 
----
+ 
 
-## 📁 Files Submitted
+##  Files Submitted
 
 ### 1. `Book.java`
 
@@ -149,7 +149,7 @@ Represents the **data model** for a book.
 
 > Used in both local storage (Room) and UI display.
 
----
+ 
 
 ### 2. `BookViewModel.java`
 
@@ -168,7 +168,7 @@ Acts as the **ViewModel** in the MVVM architecture.
 
 > Maintains UI state and handles business logic separation.
 
----
+ 
 
 ### 3. `BookRepository.java`
 
@@ -183,32 +183,31 @@ Handles **data operations** by abstracting the data sources.
 
 > Follows the Repository pattern to isolate data layer logic from the rest of the app.
 
----
+ 
 
-## 🧪 How to Run
+##  How to Run
 
 1. Clone this repository.
 2. Add it to an Android Studio project.
 3. Add your fake API endpoint or local JSON file.
 4. Build and run on an Android device or emulator.
 
----
+ 
 
-## 📝 Notes
+##  Notes
 
 * No external image loading libraries (placeholders used instead).
 * MVVM clean separation: **UI ↔ ViewModel ↔ Repository ↔ API/DB**.
 * Prepared for offline viewing via Room DB.
 
----
+ 
 
-## 📌 Future Enhancements
+##  Future Enhancements
 
 * Add paging support for large book lists.
 * Use WorkManager for background syncing.
 * Add real image loading (e.g., Glide) if allowed.
 
----
 
-Let me know if you'd like a second version that explains how to use or test each file individually, or a version tailored for submitting to a professor.
+
 
